@@ -31,7 +31,9 @@ The target user must belong to the 'Administrators' group.
 
 ## STATUS
 
-Magenta solid ................................... SETUP
-Yellow single blink ............................. STAGE1
-Yellow double blink ............................. STAGE2
-Yellow triple blink ............................. STAGE3
+| LED                 | Status                                 |
+| ------------------- | -------------------------------------- |
+| Yellow Single       | deactivate defender Stage              |
+| Yellow Double       | Backdoor Stage                         |
+| Yellow Double       | activate defender Stage                |
+| Green               | Finished                               |
