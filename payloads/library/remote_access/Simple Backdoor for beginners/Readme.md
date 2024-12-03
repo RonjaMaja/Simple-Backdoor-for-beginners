@@ -7,6 +7,7 @@
 * Credits to antonioCoco who wrote the powershell script
   
 ## Description
+* opens a backdoor that you can access with Netcat
 * 1 script deactivates Windows Defender
 * 2 script runs the powershell script
 * 3 script activates Windows Defender
