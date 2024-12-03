@@ -1,9 +1,9 @@
 # Title:      
  Simple Backdoor for beginners
 ## Description
-* 1) script deactivates Windows Defender
-* 2) script runs the powershell script
-* 3) script activates Windows Defender
+* 1. script deactivates Windows Defender
+* 2. script runs the powershell script
+* 3. script activates Windows Defender
 * Author:           RonjaMaja
 * Version:          1.0
 * Category:         Remote access
@@ -21,16 +21,16 @@ lport = the port you want to use for the Backdoor. I recommend ssh (22).
 rhost = the target
 rport = the port you want to use for the Backdoor (same as lport).
 
-# TESTED ON
-===============
+## Tested on
+
 Microsoft Windows 10 Professional Version 20H2 (PowerShell 5.1)
 
-# REQUIREMENTS
-===============
+## requirements
+
 The target user must belong to the 'Administrators' group.
 
-# STATUS
-===============
+## STATUS
+
 Magenta solid ................................... SETUP
 Yellow single blink ............................. STAGE1
 Yellow double blink ............................. STAGE2
