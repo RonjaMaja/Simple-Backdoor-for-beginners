@@ -36,5 +36,5 @@ The target user must belong to the 'Administrators' group.
 | ------------------- | -------------------------------------- |
 | Yellow Single       | deactivate defender Stage              |
 | Yellow Double       | Backdoor Stage                         |
-| Yellow Double       | activate defender Stage                |
+| Yellow Triple       | activate defender Stage                |
 | Green               | Finished                               |
